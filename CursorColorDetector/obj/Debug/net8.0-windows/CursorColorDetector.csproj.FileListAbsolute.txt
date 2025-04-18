@@ -1,0 +1,16 @@
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.exe
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.deps.json
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.runtimeconfig.json
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.dll
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.pdb
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.Form1.resources
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.csproj.GenerateResource.cache
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.AssemblyInfoInputs.cache
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.AssemblyInfo.cs
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.csproj.CoreCompileInputs.cache
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.dll
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\refint\CursorColorDetector.dll
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.pdb
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.genruntimeconfig.cache
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\ref\CursorColorDetector.dll
