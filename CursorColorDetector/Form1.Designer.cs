@@ -228,9 +228,9 @@
             label5.Font = new Font("Impact", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.Location = new Point(3, 7);
             label5.Name = "label5";
-            label5.Size = new Size(196, 29);
+            label5.Size = new Size(172, 29);
             label5.TabIndex = 11;
-            label5.Text = "Cursor Color Robot";
+            label5.Text = "Cursor Color Bot";
             // 
             // Form1
             // 

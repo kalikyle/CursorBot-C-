@@ -1,17 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\",
+  "WorkspaceRootPath": "F:\\ATM Microservice\\CursorBot-C-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|c:\\users\\garage88fort\\source\\repos\\cursorcolordetector\\cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|f:\\atm microservice\\cursorbot-c-\\cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|solutionrelative:cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|c:\\users\\garage88fort\\source\\repos\\cursorcolordetector\\cursorcolordetector\\cursorcolordetector.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|solutionrelative:cursorcolordetector\\cursorcolordetector.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|F:\\ATM Microservice\\CursorBot-C-\\cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|solutionrelative:cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -22,39 +18,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CursorColorDetector",
-              "DocumentMoniker": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\CursorColorDetector\\CursorColorDetector.csproj",
-              "RelativeDocumentMoniker": "CursorColorDetector\\CursorColorDetector.csproj",
-              "ToolTip": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\CursorColorDetector\\CursorColorDetector.csproj",
-              "RelativeToolTip": "CursorColorDetector\\CursorColorDetector.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-18T04:49:10.396Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\CursorColorDetector\\Form1.cs",
+              "DocumentMoniker": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\Form1.cs",
               "RelativeDocumentMoniker": "CursorColorDetector\\Form1.cs",
-              "ToolTip": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\CursorColorDetector\\Form1.cs",
+              "ToolTip": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\Form1.cs",
               "RelativeToolTip": "CursorColorDetector\\Form1.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowDgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAqwGYAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T03:23:15.452Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\CursorColorDetector\\Form1.cs",
+              "DocumentMoniker": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\Form1.cs",
               "RelativeDocumentMoniker": "CursorColorDetector\\Form1.cs",
-              "ToolTip": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\CursorColorDetector\\Form1.cs [Design]",
+              "ToolTip": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\Form1.cs [Design]",
               "RelativeToolTip": "CursorColorDetector\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T03:16:03Z"

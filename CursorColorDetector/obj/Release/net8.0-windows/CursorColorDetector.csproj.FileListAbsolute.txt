@@ -14,3 +14,20 @@ C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\R
 C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.pdb
 C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.genruntimeconfig.cache
 C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Release\net8.0-windows\ref\CursorColorDetector.dll
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\bin\Release\net8.0-windows\CursorColorDetector.exe
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\bin\Release\net8.0-windows\CursorColorDetector.deps.json
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\bin\Release\net8.0-windows\CursorColorDetector.runtimeconfig.json
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\bin\Release\net8.0-windows\CursorColorDetector.dll
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\bin\Release\net8.0-windows\CursorColorDetector.pdb
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.Form1.resources
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.csproj.GenerateResource.cache
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.GeneratedMSBuildEditorConfig.editorconfig
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.AssemblyInfoInputs.cache
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.AssemblyInfo.cs
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.csproj.CoreCompileInputs.cache
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.sourcelink.json
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.dll
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\refint\CursorColorDetector.dll
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.pdb
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\CursorColorDetector.genruntimeconfig.cache
+F:\ATM Microservice\CursorBot-C-\CursorColorDetector\obj\Release\net8.0-windows\ref\CursorColorDetector.dll

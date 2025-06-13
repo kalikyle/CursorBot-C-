@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\CursorColorDetector\\CursorColorDetector.csproj",
+      "projectUniqueName": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj",
       "projectName": "CursorColorDetector",
-      "projectPath": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\CursorColorDetector\\CursorColorDetector.csproj",
+      "projectPath": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj",
       "packagesPath": "C:\\Users\\Garage88fort\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Garage88fort\\source\\repos\\CursorColorDetector\\CursorColorDetector\\obj\\",
+      "outputPath": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Garage88fort\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -97,10 +97,12 @@ namespace CursorColorDetector
                         if (IsColorMatch(pixel, targetColor))
                         {
                             // Adjust cursor position to the screen offset
-                            Cursor.Position = new Point(x + screenXOffset, y + screenYOffset);
+                            //Cursor.Position = new Point(x + screenXOffset, y + screenYOffset);
 
-                            mouse_event(MouseEventFlags.LEFTDOWN, 0, 0, 0, 0);
-                            mouse_event(MouseEventFlags.LEFTUP, 0, 0, 0, 0);
+                            //mouse_event(MouseEventFlags.LEFTDOWN, 0, 0, 0, 0);
+                            //mouse_event(MouseEventFlags.LEFTUP, 0, 0, 0, 0);
+
+                            SendClick(x, y);
 
 
                         }
@@ -185,6 +187,48 @@ namespace CursorColorDetector
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        [DllImport("user32.dll")]
+        private static extern bool SetCursorPos(int X, int Y);
+
+        [DllImport("user32.dll")]
+        private static extern uint SendInput(uint nInputs, INPUT[] pInputs, int cbSize);
+
+
+        private void SendClick(int x, int y)
+        {
+            SetCursorPos(x, y);
+
+            INPUT[] inputs = new INPUT[2];
+            inputs[0].type = 0; // Mouse
+            inputs[0].mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
+
+            inputs[1].type = 0;
+            inputs[1].mi.dwFlags = MOUSEEVENTF_LEFTUP;
+
+            SendInput((uint)inputs.Length, inputs, Marshal.SizeOf(typeof(INPUT)));
+        }
+
+        private const int MOUSEEVENTF_LEFTDOWN = 0x0002;
+        private const int MOUSEEVENTF_LEFTUP = 0x0004;
+
+        [StructLayout(LayoutKind.Sequential)]
+        struct INPUT
+        {
+            public uint type;
+            public MOUSEINPUT mi;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        struct MOUSEINPUT
+        {
+            public int dx;
+            public int dy;
+            public int mouseData;
+            public int dwFlags;
+            public uint time;
+            public IntPtr dwExtraInfo;
         }
     }
 }
