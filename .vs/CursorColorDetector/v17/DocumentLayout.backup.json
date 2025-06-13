@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\ATM Microservice\\CursorBot-C-\\",
+  "WorkspaceRootPath": "F:\\GitHub Misc Repos\\CursorBot-C-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|f:\\atm microservice\\cursorbot-c-\\cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|f:\\github misc repos\\cursorbot-c-\\cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|solutionrelative:cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|F:\\ATM Microservice\\CursorBot-C-\\cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|f:\\github misc repos\\cursorbot-c-\\cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1496D797-171B-4F47-8FEA-929823F48305}|CursorColorDetector\\CursorColorDetector.csproj|solutionrelative:cursorcolordetector\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -24,25 +24,26 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs",
-              "DocumentMoniker": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\Form1.cs",
+              "DocumentMoniker": "F:\\GitHub Misc Repos\\CursorBot-C-\\CursorColorDetector\\Form1.cs",
               "RelativeDocumentMoniker": "CursorColorDetector\\Form1.cs",
-              "ToolTip": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\Form1.cs",
+              "ToolTip": "F:\\GitHub Misc Repos\\CursorBot-C-\\CursorColorDetector\\Form1.cs",
               "RelativeToolTip": "CursorColorDetector\\Form1.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAqwGgAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAALoBAAAAAAAAAAAqwNQBAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T03:23:15.452Z",
+              "WhenOpened": "2025-05-14T14:06:44.592Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\Form1.cs",
+              "DocumentMoniker": "F:\\GitHub Misc Repos\\CursorBot-C-\\CursorColorDetector\\Form1.cs",
               "RelativeDocumentMoniker": "CursorColorDetector\\Form1.cs",
-              "ToolTip": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\Form1.cs [Design]",
+              "ToolTip": "F:\\GitHub Misc Repos\\CursorBot-C-\\CursorColorDetector\\Form1.cs [Design]",
               "RelativeToolTip": "CursorColorDetector\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T03:16:03Z"
+              "WhenOpened": "2025-05-14T14:06:01.421Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

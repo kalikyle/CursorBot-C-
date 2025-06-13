@@ -14,3 +14,22 @@ C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\D
 C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.pdb
 C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.genruntimeconfig.cache
 C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\ref\CursorColorDetector.dll
+C:\Users\Garage88fort\source\repos\CursorColorDetector\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.Properties.Resources.resources
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.exe
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.deps.json
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.runtimeconfig.json
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.dll
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\bin\Debug\net8.0-windows\CursorColorDetector.pdb
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.Form1.resources
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.Properties.Resources.resources
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.csproj.GenerateResource.cache
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.GeneratedMSBuildEditorConfig.editorconfig
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.AssemblyInfoInputs.cache
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.AssemblyInfo.cs
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.csproj.CoreCompileInputs.cache
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.sourcelink.json
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.dll
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\refint\CursorColorDetector.dll
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.pdb
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\CursorColorDetector.genruntimeconfig.cache
+F:\GitHub Misc Repos\CursorBot-C-\CursorColorDetector\obj\Debug\net8.0-windows\ref\CursorColorDetector.dll

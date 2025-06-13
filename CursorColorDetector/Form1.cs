@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace CursorColorDetector
@@ -10,6 +11,9 @@ namespace CursorColorDetector
         private Color targetColor = Color.FromArgb(0, 204, 128); // Default color
         private int TOLERANCE;
         private int Sleep;
+        private Thread autoClickThread;
+        private volatile bool isAutoClicking = false;
+        private bool isColorPicked = false;
 
         // DLL imports
         [DllImport("user32.dll")]
@@ -18,6 +22,14 @@ namespace CursorColorDetector
         [DllImport("user32.dll")]
         private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
 
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
+
+        // Key event constants
+        private const int KEYEVENTF_KEYDOWN = 0x0000;
+        private const int KEYEVENTF_KEYUP = 0x0002;
+
+
         // Constants
         private const int HOTKEY_ID = 9000; // any unique ID
         private const int WM_HOTKEY = 0x0312;
@@ -25,47 +37,90 @@ namespace CursorColorDetector
         public Form1()
         {
             InitializeComponent();
-            lblStatus.Text = "Stopped";
+            lblStatus.Text = "Cursor Robot Mode Active";
             lblStatus.ForeColor = Color.Red;
             this.KeyPreview = true;
             TOLERANCE = 5;
             TolTxt1.Text = TOLERANCE.ToString();
-            Sleep = 500;
+            Sleep = 500; // Default sleep time
             SleepTxt.Text = Sleep.ToString();
         }
 
-        private void btnToggle_Click(object sender, EventArgs e)
-        {
-            ToggleBot();
-        }
+        //private void btnToggle_Click(object sender, EventArgs e)
+        //{
+        //    //ToggleBot();
+        //}
+
         private void ToggleBot()
         {
-            isRunning = !isRunning;
-            Sleep = int.Parse(SleepTxt.Text);
-
-            if (isRunning)
+            // Determine the active tab
+            if (tabControl1.SelectedTab == tabCursorRobot)
             {
-                this.Invoke((MethodInvoker)(() =>
-                {
-                    lblStatus.Text = "Running...";
-                    lblStatus.ForeColor = Color.Green; // Set text color to green
-                }));
-                btnToggle.Text = "Stop Bot";
+                StartCursorBot();
+            }
+            else if (tabControl1.SelectedTab == tabAutoClicker)
+            {
+                StartAutoClicker();
+            }
+        }
+
+        public void StartCursorBot()
+        {
+            if (!isRunning)
+            {
+                isRunning = true;
+                //btnToggle.Text = "Stop";
+                lblStatus.Text = "Cusor Bot is Running...";
+                lblStatus.ForeColor = Color.Green;
+
                 botThread = new Thread(RunBot);
                 botThread.IsBackground = true;
                 botThread.Start();
             }
             else
             {
-                lblStatus.Text = "Stopped";
-                lblStatus.ForeColor = Color.Red;
-                btnToggle.Text = "Start Bot";
-                // Let the bot loop naturally exit
+                StopCursorBot();
             }
         }
 
+        public void StartAutoClicker()
+        {
+            if (!isAutoClicking)
+            {
+                if (!int.TryParse(txtInterval.Text, out int interval))
+                {
+                    MessageBox.Show("Invalid interval value.");
+                    return;
+                }
+
+                StartAutoClicker(interval);
+                //btnToggle.Text = "Stop";
+                lblStatus.Text = "Auto Clicker is Running...";
+                lblStatus.ForeColor = Color.Green;
+            }
+            else
+            {
+                StopAutoClicker();
+                //btnToggle.Text = "Start";
+                lblStatus.Text = "Auto Clicker Stopped";
+                lblStatus.ForeColor = Color.Red;
+            }
+        }
+
+
         private void RunBot()
         {
+            if (!isColorPicked)
+            {
+                MessageBox.Show("Please pick a target color before starting the bot.");
+                isRunning = false;
+                Invoke((MethodInvoker)(() =>
+                {
+                    lblStatus.Text = "Stopped";
+                    lblStatus.ForeColor = Color.Red;
+                }));
+                return;
+            }
             while (isRunning)
             {
                 Bitmap screenshot;
@@ -97,12 +152,10 @@ namespace CursorColorDetector
                         if (IsColorMatch(pixel, targetColor))
                         {
                             // Adjust cursor position to the screen offset
-                            //Cursor.Position = new Point(x + screenXOffset, y + screenYOffset);
+                            Cursor.Position = new Point(x + screenXOffset, y + screenYOffset);
 
-                            //mouse_event(MouseEventFlags.LEFTDOWN, 0, 0, 0, 0);
-                            //mouse_event(MouseEventFlags.LEFTUP, 0, 0, 0, 0);
-
-                            SendClick(x, y);
+                            mouse_event(MouseEventFlags.LEFTDOWN, 0, 0, 0, 0);
+                            mouse_event(MouseEventFlags.LEFTUP, 0, 0, 0, 0);
 
 
                         }
@@ -126,6 +179,10 @@ namespace CursorColorDetector
         {
             LEFTDOWN = 0x02,
             LEFTUP = 0x04,
+            RIGHTDOWN = 0x08,
+            RIGHTUP = 0x10,
+            MIDDLEDOWN = 0x20,
+            MIDDLEUP = 0x40
         }
 
         [DllImport("user32.dll")]
@@ -139,6 +196,7 @@ namespace CursorColorDetector
                 //MessageBox.Show("Target color set to: " + targetColor.ToString(), "Color Selected");
                 label3.Text = targetColor.ToString();
                 label3.ForeColor = targetColor;
+                isColorPicked = true;
             }
         }
 
@@ -179,56 +237,244 @@ namespace CursorColorDetector
             TolTxt1.Text = (++TOLERANCE).ToString();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void StopCursorBot()
+        {
+            isRunning = false;
+            isAutoClicking = false;
+            if (botThread != null && botThread.IsAlive)
+            {
+                botThread.Join();
+            }
+
+            lblStatus.Invoke((MethodInvoker)(() =>
+            {
+                lblStatus.Text = "Cusor Bot Stopped";
+                lblStatus.ForeColor = Color.Red;
+            }));
+
+
+            //btnToggle.Invoke((MethodInvoker)(() =>
+            //{
+            //    btnToggle.Text = "Start";
+            //}));
+        }
+
+
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tabCursorRobot)
+            {
+                // Activate cursor bot
+                StopAutoClicker(); // if needed
+                lblStatus.Text = "Cursor Robot Mode Active";
+            }
+            else if (tabControl1.SelectedTab == tabAutoClicker)
+            {
+                // Activate auto clicker
+                StopCursorBot(); // if needed
+                lblStatus.Text = "Auto Clicker Mode Active";
+            }
+        }
+
+
+
+        private void StartAutoClicker(int interval)
+        {
+            isAutoClicking = true;
+
+            autoClickThread = new Thread(() =>
+            {
+                string selectedButton = "Left";
+                bool holdClick = false;
+
+                // Safely read values from UI controls
+                cmbMouseButton.Invoke(() =>
+                {
+                    if (cmbMouseButton.SelectedItem != null)
+                        selectedButton = cmbMouseButton.SelectedItem.ToString();
+                });
+
+                chkHoldClick.Invoke(() =>
+                {
+                    holdClick = chkHoldClick.Checked;
+                });
+
+                if (holdClick)
+                {
+                    // Simulate holding down once
+                    HoldMouseDown(selectedButton);
+
+                    // Stay in loop until stopped
+                    while (isAutoClicking)
+                    {
+                        Thread.Sleep(interval); // keep the thread alive but don't flood CPU
+                    }
+
+                    // Release mouse when stopping
+                    HoldMouseUp(selectedButton);
+                }
+                else
+                {
+                    // Repeated clicking loop
+                    while (isAutoClicking)
+                    {
+                        ClickMouse(selectedButton);
+                        Thread.Sleep(interval);
+                    }
+                }
+            });
+
+            autoClickThread.IsBackground = true;
+            autoClickThread.Start();
+        }
+
+        private void PressKey(Keys key)
+        {
+            byte vk = (byte)key;
+            keybd_event(vk, 0, KEYEVENTF_KEYDOWN, UIntPtr.Zero);
+            Thread.Sleep(50); // short delay to simulate key hold
+            keybd_event(vk, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);
+        }
+
+
+        private void ClickMouse(string button)
+        {
+            switch (button)
+            {
+                case "Left":
+                    mouse_event(MouseEventFlags.LEFTDOWN | MouseEventFlags.LEFTUP, 0, 0, 0, 0);
+                    break;
+                case "Right":
+                    mouse_event(MouseEventFlags.RIGHTDOWN | MouseEventFlags.RIGHTUP, 0, 0, 0, 0);
+                    break;
+                case "Middle":
+                    mouse_event(MouseEventFlags.MIDDLEDOWN | MouseEventFlags.MIDDLEUP, 0, 0, 0, 0);
+                    break;
+                case "E":
+                    PressKey(Keys.E);
+                    break;
+                case "F":
+                    PressKey(Keys.F);
+                    break;
+            }
+        }
+
+        private void HoldMouseDown(string button)
+        {
+            switch (button)
+            {
+                case "Left":
+                    mouse_event(MouseEventFlags.LEFTDOWN, 0, 0, 0, 0);
+                    break;
+                case "Right":
+                    mouse_event(MouseEventFlags.RIGHTDOWN, 0, 0, 0, 0);
+                    break;
+                case "Middle":
+                    mouse_event(MouseEventFlags.MIDDLEDOWN, 0, 0, 0, 0);
+                    break;
+            }
+        }
+
+        private void HoldMouseUp(string button)
+        {
+            switch (button)
+            {
+                case "Left":
+                    mouse_event(MouseEventFlags.LEFTUP, 0, 0, 0, 0);
+                    break;
+                case "Right":
+                    mouse_event(MouseEventFlags.RIGHTUP, 0, 0, 0, 0);
+                    break;
+                case "Middle":
+                    mouse_event(MouseEventFlags.MIDDLEUP, 0, 0, 0, 0);
+                    break;
+            }
+        }
+
+
+        private void StopAutoClicker()
+        {
+            isAutoClicking = false;
+            lblStatus.Invoke((MethodInvoker)(() =>
+            {
+                lblStatus.Text = "Stopped";
+                lblStatus.ForeColor = Color.Red;
+            }));
+        }
+
+        private void SleepTxt_TextChanged(object sender, EventArgs e)
+        {
+            if (int.TryParse(SleepTxt.Text, out int newSleep))
+            {
+                Sleep = newSleep;
+            }
+            else
+            {
+                MessageBox.Show("Invalid sleep time. Please enter a valid number.");
+                SleepTxt.Text = Sleep.ToString(); // Reset to previous value
+            }
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string url = "https://www.facebook.com/KTP23o/"; // Replace with your link
+            try
+            {
+                System.Diagnostics.Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true // Important for .NET Core and .NET 5+
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open the link: " + ex.Message);
+            }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
         {
 
         }
 
-        [DllImport("user32.dll")]
-        private static extern bool SetCursorPos(int X, int Y);
-
-        [DllImport("user32.dll")]
-        private static extern uint SendInput(uint nInputs, INPUT[] pInputs, int cbSize);
-
-
-        private void SendClick(int x, int y)
+        private void button4_Click(object sender, EventArgs e)
         {
-            SetCursorPos(x, y);
-
-            INPUT[] inputs = new INPUT[2];
-            inputs[0].type = 0; // Mouse
-            inputs[0].mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
-
-            inputs[1].type = 0;
-            inputs[1].mi.dwFlags = MOUSEEVENTF_LEFTUP;
-
-            SendInput((uint)inputs.Length, inputs, Marshal.SizeOf(typeof(INPUT)));
+            string url = "https://github.com/kalikyle"; // Replace with your link
+            try
+            {
+                System.Diagnostics.Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true // Important for .NET Core and .NET 5+
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open the link: " + ex.Message);
+            }
         }
 
-        private const int MOUSEEVENTF_LEFTDOWN = 0x0002;
-        private const int MOUSEEVENTF_LEFTUP = 0x0004;
-
-        [StructLayout(LayoutKind.Sequential)]
-        struct INPUT
+        private void button5_Click(object sender, EventArgs e)
         {
-            public uint type;
-            public MOUSEINPUT mi;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        struct MOUSEINPUT
-        {
-            public int dx;
-            public int dy;
-            public int mouseData;
-            public int dwFlags;
-            public uint time;
-            public IntPtr dwExtraInfo;
+            string url = "www.linkedin.com/in/kyle-pintor-8a17a417b"; // Replace with your link
+            try
+            {
+                System.Diagnostics.Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true // Important for .NET Core and .NET 5+
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open the link: " + ex.Message);
+            }
         }
     }
 }

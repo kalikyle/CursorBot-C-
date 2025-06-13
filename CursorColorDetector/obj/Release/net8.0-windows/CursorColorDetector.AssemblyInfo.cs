@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CursorColorDetector")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e651f61d3e8b73bad514fb1d5a0b0cc5ef59953")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CursorColorDetector")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CursorColorDetector")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

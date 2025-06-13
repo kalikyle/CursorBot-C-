@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj": {}
+    "F:\\GitHub Misc Repos\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj": {}
   },
   "projects": {
-    "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj": {
+    "F:\\GitHub Misc Repos\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj",
+        "projectUniqueName": "F:\\GitHub Misc Repos\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj",
         "projectName": "CursorColorDetector",
-        "projectPath": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj",
+        "projectPath": "F:\\GitHub Misc Repos\\CursorBot-C-\\CursorColorDetector\\CursorColorDetector.csproj",
         "packagesPath": "C:\\Users\\Garage88fort\\.nuget\\packages\\",
-        "outputPath": "F:\\ATM Microservice\\CursorBot-C-\\CursorColorDetector\\obj\\",
+        "outputPath": "F:\\GitHub Misc Repos\\CursorBot-C-\\CursorColorDetector\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Garage88fort\\AppData\\Roaming\\NuGet\\NuGet.Config",
