@@ -56,13 +56,13 @@
             txtInterval = new TextBox();
             label8 = new Label();
             tabPage1 = new TabPage();
-            label12 = new Label();
-            label13 = new Label();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            label14 = new Label();
             label15 = new Label();
+            label14 = new Label();
+            button5 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            label13 = new Label();
+            label12 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabControl1.SuspendLayout();
@@ -378,51 +378,26 @@
             tabPage1.UseVisualStyleBackColor = true;
             tabPage1.Click += tabPage1_Click;
             // 
-            // label12
+            // label15
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(18, 64);
-            label12.Name = "label12";
-            label12.Size = new Size(154, 14);
-            label12.TabIndex = 0;
-            label12.Text = "Developer: @Kayleskii";
-            label12.Click += label12_Click;
+            label15.AutoSize = true;
+            label15.Font = new Font("UniDreamLED", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label15.ForeColor = Color.Navy;
+            label15.Location = new Point(15, 18);
+            label15.Name = "label15";
+            label15.Size = new Size(150, 39);
+            label15.TabIndex = 6;
+            label15.Text = "KTPs2025";
             // 
-            // label13
+            // label14
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(18, 90);
-            label13.Name = "label13";
-            label13.Size = new Size(63, 14);
-            label13.TabIndex = 1;
-            label13.Text = "Socials:";
-            // 
-            // button3
-            // 
-            button3.FlatAppearance.BorderColor = Color.Blue;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(18, 115);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "Facebook";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.FlatAppearance.BorderColor = Color.FromArgb(192, 0, 192);
-            button4.FlatAppearance.BorderSize = 2;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(112, 115);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 3;
-            button4.Text = "GitHub";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            label14.AutoSize = true;
+            label14.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label14.Location = new Point(123, 154);
+            label14.Name = "label14";
+            label14.Size = new Size(203, 14);
+            label14.TabIndex = 5;
+            label14.Text = "© All Rights Reserved 2025 ©";
             // 
             // button5
             // 
@@ -437,26 +412,51 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
-            // label14
+            // button4
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(132, 153);
-            label14.Name = "label14";
-            label14.Size = new Size(175, 14);
-            label14.TabIndex = 5;
-            label14.Text = "All Rights Received 2025";
+            button4.FlatAppearance.BorderColor = Color.FromArgb(192, 0, 192);
+            button4.FlatAppearance.BorderSize = 2;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Location = new Point(112, 115);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 23);
+            button4.TabIndex = 3;
+            button4.Text = "GitHub";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
-            // label15
+            // button3
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("UniDreamLED", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label15.ForeColor = Color.Navy;
-            label15.Location = new Point(15, 18);
-            label15.Name = "label15";
-            label15.Size = new Size(135, 39);
-            label15.TabIndex = 6;
-            label15.Text = "CHUPAPS";
+            button3.FlatAppearance.BorderColor = Color.Blue;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Location = new Point(18, 115);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 23);
+            button3.TabIndex = 2;
+            button3.Text = "Facebook";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(18, 90);
+            label13.Name = "label13";
+            label13.Size = new Size(63, 14);
+            label13.TabIndex = 1;
+            label13.Text = "Socials:";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Consolas", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label12.Location = new Point(18, 64);
+            label12.Name = "label12";
+            label12.Size = new Size(154, 14);
+            label12.TabIndex = 0;
+            label12.Text = "Developer: @Kayleskii";
+            label12.Click += label12_Click;
             // 
             // Form1
             // 
